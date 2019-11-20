@@ -54,10 +54,15 @@ if(isset($_POST["player"])) {
 				<h1>Equipe actuelle</h1>
 				<ul style="margin-top: 5%;">
 					<?php
+						$isALeastOne = false;
 						foreach ($posList as $key => $value) {
 							if(isset($_SESSION["POS_".$key])) { 
 								echo "<li>" . $value . ": " . $players[$_SESSION["POS_".$key]]["nom"] . " " . $players[$_SESSION["POS_".$key]]["prenom"] ." </li>";
+								$isALeastOne = true;
 							}
+						}
+						if(!$isALeastOne) {
+							echo "<p> L'equipe est vide </p>";
 						}
 					?>
 				</ul>
