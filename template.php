@@ -67,7 +67,10 @@ if(isset($_POST["player"])) {
 						}
 					?>
 				</ul>
-				<form method="post"><button class="btn btn-danger" type="submit" name="raz" value="RAZ">RAZ</button></form>
+				<?php if($isALeastOne) { ?>
+					<form method="post"><button class="btn btn-danger" type="submit" name="raz" value="RAZ">RAZ</button></form>	
+				<?php } ?>
+				
 			</div>
 			<div class="col-lg">
 				<h1>Ajouter un <?php echo $posList[$PagePos]; ?> </h1>
