@@ -1,6 +1,6 @@
+<<<<<<< HEAD
 <?php
 
-include("vars.php"); 
 $position = "gardien";
 
 if(isset($_POST["player"])) {
@@ -9,6 +9,10 @@ if(isset($_POST["player"])) {
 }
 
 ?>
+=======
+<?php include("vars.php"); ?>
+
+>>>>>>> fc527df08eaf6a9e494dacbf05b6df6a0e2e2f4d
 <!DOCTYPE html>
 <html>
 <head>
@@ -70,7 +74,7 @@ if(isset($_POST["player"])) {
 								<td><?php echo $player["nom"] ?></td>
 								<td><?php echo $player["prenom"] ?></td>
 								<td><?php echo $key ?></td>
-								<td><form method="post"><button class="btn btn-success" type="submit" name="player" value="<?php echo $key; ?>">Ajouter</button></form></td>
+								<td><form method="post"><button type="submit" name="player" value="<?php echo $key; ?>">Ajouter</button></form></td>
 							</tr>
 							<?php }
 						} ?>
