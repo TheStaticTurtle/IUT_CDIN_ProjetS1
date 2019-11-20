@@ -26,6 +26,10 @@ if(isset($_POST["player"])) {
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<a class="navbar-brand" href="index.php">Gestion équipe</a>
+		
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
@@ -46,7 +50,7 @@ if(isset($_POST["player"])) {
 	</nav>
 
 	<div class="container" style="margin-top: 1%">
-		<div class="row " style="margin-top: 3%;">
+		<div class="row" style="margin-top: 3%;">
 			<div class="col-lg">
 				<h1>Equipe actuelle</h1>
 				<ul style="margin-top: 5%;">
