@@ -50,7 +50,7 @@ if(isset($_POST["player"])) {
 
 	<div class="container" style="margin-top: 1%">
 		<div class="row " style="margin-top: 3%;">
-			<div class="col">
+			<div class="col-xl">
 				<h1>Equipe actuelle</h1>
 				<ul style="margin-top: 5%;">
 					<?php
@@ -68,7 +68,7 @@ if(isset($_POST["player"])) {
 				</ul>
 				<form method="post"><button class="btn btn-danger" type="submit" name="raz" value="RAZ">RAZ</button></form>
 			</div>
-			<div class="col">
+			<div class="col-xl">
 				<h1>Ajouter un <?php echo $posList[$PagePos]; ?> </h1>
 				<table style="margin-top: 5%" class="table">
 					<thead>
