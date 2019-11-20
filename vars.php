@@ -1,3 +1,5 @@
+<?php
+
 $players = array(
 	1 => array(  "nom" => "Lloris", "prenom" => "Hugo", "poste" => "Gardien"),
 	2 => array(  "nom" => "Pavard", "prenom" => "Benjamin", "poste" => "Défenseur"),
