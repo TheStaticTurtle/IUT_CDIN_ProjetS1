@@ -1,11 +1,11 @@
 <?php
-
+session_start();
 include("vars.php"); 
-$position = "gardien";
+$page=1;
 
 if(isset($_POST["player"])) {
 	$id = $_POST["player"];
-	$_SESSION["POS_".$position] = $id;
+	$_SESSION["POS_".$page] = $id;
 }
 
 ?>
@@ -47,9 +47,13 @@ if(isset($_POST["player"])) {
 				<ul style="margin-top: 3%">
 					<li> <b>Equipe actuelle</b> </li>
 
-					<?php if(isset($_SESSION["POS_".$position])) { 
-						echo "<li>" . $position . ": " . $players[$_SESSION["POS_".$position]]["nom"] . " " . $players[$_SESSION["POS_".$position]]["prenom"] . "</li>";
-					} ?>
+					<?php
+						foreach ($posList as $key => $value) {
+							if(isset($_SESSION["POS_".$key])) { 
+								echo "<li>" . $value . ": " . $players[$_SESSION["POS_".$key]]["nom"] . " " . $players[$_SESSION["POS_".$key]]["prenom"] ." </li>";
+							}
+						}
+					?>
 
 				</ul>
 			</div>
@@ -65,7 +69,7 @@ if(isset($_POST["player"])) {
 					</thead>
 					<tbody>
 						<?php foreach ($players as $key => $player) { 
-							if ($player["poste"] == "Gardien") { ?>
+							if ($player["poste"] == $posList[$page]) { ?>
 							<tr>
 								<td><?php echo $player["nom"] ?></td>
 								<td><?php echo $player["prenom"] ?></td>

@@ -17,3 +17,10 @@ $players = array(
 	21 => array(  "nom" => "Dubois", "prenom" => "Léo", "poste" => "Défenseur"),
 	23 => array(  "nom" => "Areola", "prenom" => "Alphonse", "poste" => "Gardien"),
 );
+
+$posList = array(
+	1 => "Gardien",
+	2 => "Défenseur",
+	3 => "Milieu",
+	4 => "Attaquant",
+);

@@ -1,3 +1,14 @@
+<?php
+session_start();
+include("vars.php"); 
+$page=4;
+
+if(isset($_POST["player"])) {
+	$id = $_POST["player"];
+	$_SESSION["POS_".$page] = $id;
+}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,6 +46,15 @@
 				<button type="button" class="btn btn-danger">Remise a zero</button>
 				<ul style="margin-top: 3%">
 					<li> <b>Equipe actuelle</b> </li>
+
+					<?php
+						foreach ($posList as $key => $value) {
+							if(isset($_SESSION["POS_".$key])) { 
+								echo "<li>" . $value . ": " . $players[$_SESSION["POS_".$key]]["nom"] . " " . $players[$_SESSION["POS_".$key]]["prenom"] ." </li>";
+							}
+						}
+					?>
+
 				</ul>
 			</div>
 			<div class="col-6">
@@ -48,12 +68,16 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<th>TESTP</th>
-							<td>TESTN</td>
-							<td>66535</td>
-							<td><button type="button" class="btn btn-outline-success">Ajouter</button></td>
-						</tr>
+						<?php foreach ($players as $key => $player) { 
+							if ($player["poste"] == $posList[$page]) { ?>
+							<tr>
+								<td><?php echo $player["nom"] ?></td>
+								<td><?php echo $player["prenom"] ?></td>
+								<td><?php echo $key ?></td>
+								<td><form method="post"><button class="btn btn-success" type="submit" name="player" value="<?php echo $key; ?>">Ajouter</button></form></td>
+							</tr>
+							<?php }
+						} ?>
 					</tbody>
 				</table>
 			<div>
