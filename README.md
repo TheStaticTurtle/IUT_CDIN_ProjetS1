@@ -34,7 +34,7 @@ Faites de même pour les défenseurs, milieux et attaquants. Vous crérez donc 4
 
 L’interface si dessous devra être réalisée avec Bootstrap et devra être responsive : sur 2 colonnes puis sur 1 colonne lorsque l’écran devient trop petit pour un affichage correct sur 2 colonnes.
 
-Interface bureau
 ![Desktop interface](https://i.ibb.co/dJXr14m/index.png)
-Interface mobile
+*Interface bureau
 ![Mobile interface](https://i.ibb.co/LvYpg4X/index2.png)
+*Interface mobile
