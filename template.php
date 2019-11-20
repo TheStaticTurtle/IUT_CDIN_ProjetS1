@@ -1,12 +1,21 @@
 <?php
+session_start();
+include("vars.php"); 
+
 if(isset($_POST["raz"])) {
 	foreach ($posList as $key => $value) {
 		if(isset($_SESSION["POS_".$key])) { 
 			unset($_SESSION["POS_".$key]);
 		}
 	}
-
 }
+
+if(isset($_POST["player"])) {
+	$id = $_POST["player"];
+	$_SESSION["POS_".$PagePos] = $id;
+}
+
+
 ?>
 <!DOCTYPE html>
 <html>
