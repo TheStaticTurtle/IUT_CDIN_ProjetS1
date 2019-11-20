@@ -26,12 +26,18 @@ if(isset($_POST["player"])) {
 	<style type="text/css">
 		body {font-size:3rem;} /*1rem = 16px*/
 		h1 {font-size:5.5rem;} /*1rem = 16px*/
+		button {font-size: 3rem !important }
+		a {font-size: 3rem !important;}
+		.linkNav {font-size: 2rem !important}
 		/*span {font-size:3rem;} /*1rem = 16px*/
 
 		/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-		@media (min-width: 768px) {  
-		  body {font-size:1rem;} /*1rem = 16px*/
-		  h1 {font-size:3rem;} /*1rem = 16px*/
+		@media (min-width: 600px) {  
+			body {font-size:1rem;} /*1rem = 16px*/
+			h1 {font-size:3rem;} /*1rem = 16px*/
+			button {font-size: 1rem !important}
+			a {	font-size: 1.5rem !important; }
+			.linkNav {font-size: 1rem !important}
 		}
 	</style>
 </head>
@@ -47,16 +53,16 @@ if(isset($_POST["player"])) {
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item">
-					<a class="nav-link" href="gardien.php">Gardien</a>
+					<a class="nav-link linkNav" href="gardien.php">Gardien</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="defenseur.php">Defenseur</a>
+					<a class="nav-link linkNav" href="defenseur.php">Defenseur</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="milieu.php">Milieu</a>
+					<a class="nav-link linkNav" href="milieu.php">Milieu</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="attaquant.php">Attaquant</a>
+					<a class="nav-link linkNav" href="attaquant.php">Attaquant</a>
 				</li>
 			</ul>
 		</div>
