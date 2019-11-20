@@ -20,7 +20,7 @@ if(isset($_POST["player"])) {
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Gestion de l'equipe</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
