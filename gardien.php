@@ -1,3 +1,5 @@
+<?php include("vars.php"); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,12 +50,13 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<th>TESTP</th>
-							<td>TESTN</td>
-							<td>66535</td>
-							<td><button type="button" class="btn btn-outline-success">Ajouter</button></td>
-						</tr>
+						<?php foreach ($players as $key => $player) { ?>
+							<tr>
+								<td><?php echo $player["nom"] ?></td>
+								<td><?php echo $player["prenom"] ?></td>
+								<td><?php echo $key ?></td>
+							</tr>
+						<?php } ?>
 					</tbody>
 				</table>
 			<div>
