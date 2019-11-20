@@ -48,7 +48,7 @@ if(isset($_POST["player"])) {
 					<li> <b>Equipe actuelle</b> </li>
 
 					<?php if(isset($_SESSION["POS_".$position])) { 
-						echo "<li>" . $position . ": " . $players[$position]["nom"] . " " . $players[$position]["prenom"] . "</li>";
+						echo "<li>" . $position . ": " . $players[$_SESSION["POS_".$position]]["nom"] . " " . $players[$_SESSION["POS_".$position]]["prenom"] . "</li>";
 					} ?>
 
 				</ul>
