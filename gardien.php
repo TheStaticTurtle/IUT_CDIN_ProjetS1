@@ -50,13 +50,15 @@
 						</tr>
 					</thead>
 					<tbody>
-						<?php foreach ($players as $key => $player) { ?>
+						<?php foreach ($players as $key => $player) { 
+							if ($player["poste"] == "Gardien") { ?>
 							<tr>
 								<td><?php echo $player["nom"] ?></td>
 								<td><?php echo $player["prenom"] ?></td>
 								<td><?php echo $key ?></td>
 							</tr>
-						<?php } ?>
+							<?php }
+						} ?>
 					</tbody>
 				</table>
 			<div>
