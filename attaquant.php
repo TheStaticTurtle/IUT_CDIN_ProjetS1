@@ -1,11 +1,11 @@
 <?php
 session_start();
 include("vars.php"); 
-$page=4;
+$PagePos=4;
 
 if(isset($_POST["player"])) {
 	$id = $_POST["player"];
-	$_SESSION["POS_".$page] = $id;
+	$_SESSION["POS_".$PagePos] = $id;
 }
 
 ?>
@@ -20,21 +20,21 @@ if(isset($_POST["player"])) {
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="index.php">Getion équipe</a>
+		<a class="navbar-brand" href="index.php">Gestion équipe</a>
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item">
-					<a class="nav-link" href="#">Gardient</a>
+					<a class="nav-link" href="gardien.php">Gardien</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Defenseur</a>
+					<a class="nav-link" href="defenseur.php">Defenseur</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Milieu</a>
+					<a class="nav-link" href="milieu.php">Milieu</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Attackant</a>
+					<a class="nav-link" href="attaquant.php">Attaquant</a>
 				</li>
 			</ul>
 		</div>
@@ -43,7 +43,7 @@ if(isset($_POST["player"])) {
 	<div class="container" style="margin-top: 1%">
 		<div class="row">
 			<div class="col">
-				<button type="button" class="btn btn-danger">Remise a zero</button>
+				<button type="button" class="btn btn-danger">RAZ</button>
 				<ul style="margin-top: 3%">
 					<li> <b>Equipe actuelle</b> </li>
 
@@ -61,15 +61,15 @@ if(isset($_POST["player"])) {
 				<table style="margin-top: 3%" class="table">
 					<thead>
 						<tr>
-							<th scope="col">Prenom</th>
+							<th scope="col">Prénom</th>
 							<th scope="col">Nom</th>
-							<th scope="col">Numero</th>
+							<th scope="col">Numéro</th>
 							<th scope="col">Action</th>
 						</tr>
 					</thead>
 					<tbody>
 						<?php foreach ($players as $key => $player) { 
-							if ($player["poste"] == $posList[$page]) { ?>
+							if ($player["poste"] == $posList[$PagePos]) { ?>
 							<tr>
 								<td><?php echo $player["nom"] ?></td>
 								<td><?php echo $player["prenom"] ?></td>
