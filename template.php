@@ -23,6 +23,17 @@ if(isset($_POST["player"])) {
 	<title>Gestion équipe</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		body {font-size:3rem;} /*1rem = 16px*/
+		h1 {font-size:5.5rem;} /*1rem = 16px*/
+		/*span {font-size:3rem;} /*1rem = 16px*/
+
+		/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+		@media (min-width: 768px) {  
+		  body {font-size:1rem;} /*1rem = 16px*/
+		  h1 {font-size:3rem;} /*1rem = 16px*/
+		}
+	</style>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
