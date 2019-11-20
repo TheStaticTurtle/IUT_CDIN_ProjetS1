@@ -1,5 +1,6 @@
 # Projet de CDIN en S1
 
+![Departement informatique IUT Belfort-Monbeliard](https://i.ibb.co/TtdKXhd/iut-info1920-P-1.png)
 ## Sujet :
 
 Créer une interface web permettant de créer une équipe de 4 joueurs composée d'un gardien, d'un défenseur, d'un milieu et d'un attaquant.
