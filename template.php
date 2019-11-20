@@ -49,12 +49,10 @@ if(isset($_POST["player"])) {
 	</nav>
 
 	<div class="container" style="margin-top: 1%">
-		<div class="row">
+		<div class="row" style="margin-top: 3%;">
 			<div class="col">
-				<form method="post"><button class="btn btn-danger" type="submit" name="raz" value="RAZ">RAZ</button></form>
-				<ul style="margin-top: 3%">
-					<li> <b>Equipe actuelle</b> </li>
-
+				<h1>Equipe actuelle</h1>
+				<ul style="margin-top: 5%;">
 					<?php
 						foreach ($posList as $key => $value) {
 							if(isset($_SESSION["POS_".$key])) { 
@@ -62,11 +60,12 @@ if(isset($_POST["player"])) {
 							}
 						}
 					?>
-
 				</ul>
+				<form method="post"><button class="btn btn-danger" type="submit" name="raz" value="RAZ">RAZ</button></form>
 			</div>
 			<div class="col-6">
-				<table style="margin-top: 3%" class="table">
+				<h1>Ajouter un <?php echo $posList[$PagePos]; ?> </h1>
+				<table style="margin-top: 5%" class="table">
 					<thead>
 						<tr>
 							<th scope="col">Prénom</th>
