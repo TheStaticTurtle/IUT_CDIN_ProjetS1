@@ -8,4 +8,4 @@ if(isset($_POST["player"])) {
 	$_SESSION["POS_".$PagePos] = $id;
 }
 
-include("template.html");
+include("template.php");
