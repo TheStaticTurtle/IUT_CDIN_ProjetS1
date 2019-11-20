@@ -56,6 +56,7 @@
 								<td><?php echo $player["nom"] ?></td>
 								<td><?php echo $player["prenom"] ?></td>
 								<td><?php echo $key ?></td>
+								<td><form method="post"><button type="submit" name="player" value="<?php echo $key; ?>">Ajouter</button></form></td>
 							</tr>
 							<?php }
 						} ?>
