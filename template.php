@@ -76,7 +76,7 @@ if(isset($_POST["player"])) {
 						$isALeastOne = false;
 						foreach ($posList as $key => $value) {
 							if(isset($_SESSION["POS_".$key])) { 
-								echo "<li>" . $value . ": " . $players[$_SESSION["POS_".$key]]["nom"] . " " . $players[$_SESSION["POS_".$key]]["prenom"] ." </li>";
+								echo "<li>" . $value . ": " . $players[$_SESSION["POS_".$key]]["prenom"] . " " . $players[$_SESSION["POS_".$key]]["nom"] ." </li>";
 								$isALeastOne = true;
 							}
 						}
@@ -105,8 +105,8 @@ if(isset($_POST["player"])) {
 						<?php foreach ($players as $key => $player) { 
 							if ($player["poste"] == $posList[$PagePos]) { ?>
 							<tr>
-								<td><?php echo $player["nom"] ?></td>
 								<td><?php echo $player["prenom"] ?></td>
+								<td><?php echo $player["nom"] ?></td>
 								<td><?php echo $key ?></td>
 								<td><form method="post"><button class="btn btn-success" type="submit" name="player" value="<?php echo $key; ?>">Ajouter</button></form></td>
 							</tr>
